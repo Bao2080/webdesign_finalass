@@ -1,0 +1,19 @@
+html {
+  /* background: #000; */
+  text-align: center;
+}
+.container {
+  width: 100%;
+}
+
+.row {
+	display: flex;
+    width: 750px;
+    justify-content: space-around;
+}
+
+.row1 {
+	display: flex;
+    width: 750px;
+	padding-left: 2.5px;
+}

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  /*display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #333;*/
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 1296.4844px;
+  /* border: solid 5px #fff;
+  border-radius: 20px; */
+  overflow: hidden;
+  transition: transform 300ms ease;
+}
+.image-container .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: 100%;
+  background-position: center;
+}
+.image-container .image:first-child {
+  background: url("../img/interface blog/1.png");
+  /* filter: grayscale(100%); */
+}
+.image-container .image:nth-child(2) {
+  background: url("../img/interface blog/2.png");
+}
+.image-container .slider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: rgba(242, 242, 242, 0.3);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 2;
+  transition: all 200ms linear;
+}
+.image-container .slider:hover {
+  background: rgba(242, 242, 242, 0.1);
+}
+.image-container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 6px;
+  height: 800px;
+  background: white;
+  cursor: move;
+  transition: all 300ms ease;
+}
+
+.buttonRange {
+  z-index: 0;
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  cursor: drag;
+}
+.buttonRange::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-70%, -50%);
+}
+.buttonRange::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(70%, -50%);
+}
